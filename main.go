@@ -51,7 +51,6 @@ func main() {
 
 	// Find last non-silent sample
 	for i := end; i >= 0; i-- {
-		fmt.Printf("end sample: %f\n", f64Buf.Data[i])
 		if math.Abs(f64Buf.Data[i]) > *thresholdAmplitude {
 			end = i
 			break
